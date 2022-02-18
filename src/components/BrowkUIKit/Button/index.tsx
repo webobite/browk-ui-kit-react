@@ -24,14 +24,14 @@ export interface IButton {
   /**
    * Inline styling for button
    */
-  buttonStyle?: React.CSSProperties;
+  customInlineStyle?: React.CSSProperties;
 }
 
 const Button = (props: IButton) => {
-  const { label, onClickHandler, className, buttonStyle } = props;
+  const { label, onClickHandler, className, customInlineStyle } = props;
   return (
     <button
-      style={buttonStyle}
+      style={customInlineStyle}
       type="button"
       className={["ui-btn", className].join(" ")}
       onClick={onClickHandler}

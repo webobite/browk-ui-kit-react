@@ -12,6 +12,15 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+Template.parameters = { pseudo: { hover: true } }
+
+export const DefaultAndSmallSizeButton = Template.bind({});
+DefaultAndSmallSizeButton.args = {
+  label: "Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: 'default small',
+  buttonStyle: {}
+};
 
 export const PrimaryAndSmallSizeButton = Template.bind({});
 PrimaryAndSmallSizeButton.args = {
@@ -43,8 +52,9 @@ PrimaryButtonWithCustomStyle.args = {
   onClickHandler: ()=> console.log("Button is pressed"),
   className: '',
   buttonStyle: {
-    backgroundColor: 'red',
+    backgroundColor: 'black',
     width: '70px',
-    height: '30px'
+    height: '30px',
+    color: '#ffffff'
   }
 }

@@ -11,7 +11,14 @@ export interface IButton {
    */
   onClickHandler: () => void;
   /**
-   * className for button
+   * className for button :
+   *  - default
+   *  - active
+   *  - disabled
+   *  - small
+   *  - medium
+   *  - large
+   *  - primary
    */
   className?: string;
   /**

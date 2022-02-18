@@ -14,8 +14,9 @@ button.ui-btn .ui-btn-label {
   border-radius: 4px;
 }
 
+/* TODO: Hover part not working in storybook */
 button:hover {
-  background-color: red;
+  background-color: var(--hover);
 }
 
 /* primary default button className */

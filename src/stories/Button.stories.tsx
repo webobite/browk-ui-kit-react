@@ -22,9 +22,17 @@ DefaultAndSmallSizeButton.args = {
   customInlineStyle: {}
 };
 
+export const DisabledAndSmallSizeButton = Template.bind({});
+DisabledAndSmallSizeButton.args = {
+  label: "Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: 'disabled small',
+  customInlineStyle: {}
+};
+
 export const PrimaryAndSmallSizeButton = Template.bind({});
 PrimaryAndSmallSizeButton.args = {
-  label: "Button",
+  label: "Change label of small Button",
   onClickHandler: ()=> console.log("Button is pressed"),
   className: 'primary small',
   customInlineStyle: {}
@@ -32,7 +40,7 @@ PrimaryAndSmallSizeButton.args = {
 
 export const PrimaryAndMediumSizeButton = Template.bind({});
 PrimaryAndMediumSizeButton.args = {
-  label: "Button",
+  label: "Change label of Medium Button",
   onClickHandler: ()=> console.log("Button is pressed"),
   className: 'primary medium',
   customInlineStyle: {}
@@ -40,7 +48,7 @@ PrimaryAndMediumSizeButton.args = {
 
 export const PrimaryAndLargeSizeButton = Template.bind({});
 PrimaryAndLargeSizeButton.args = {
-  label: "Button",
+  label: "Change label of Large Button",
   onClickHandler: ()=> console.log("Button is pressed"),
   className: 'primary large',
   customInlineStyle: {}

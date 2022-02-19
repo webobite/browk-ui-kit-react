@@ -5,20 +5,20 @@ interface IIcon {
   /**
    * Size of Icons (Width and Height) in px
    */
-  size: number | undefined;
+  size?: string | undefined;
   /**
    * With Size properties respective units in css
    *  for ex : icon width and height 
    *      width : 2px
    *      height: 2px
    */
-  unit: "px" | "em" | "pt" | "pc" | "em" | undefined;
+  // unit: "px" | "em" | "pt" | "pc" | "em" | undefined;
   /**
    * ViewBox properties of the svg Icon
    *  for example : 
    *      viewBox="0 0 24 24"
    */
-  viewBox: "" | undefined;
+  viewBox: string | undefined;
   /**
    * Color of Icon
    */
@@ -31,7 +31,7 @@ interface IIcon {
   /**
    * custom style with className
    */
-  className: "" | undefined;
+  className: string | undefined;
   /**
    * Custom inline styles to Icon Component
    */
@@ -41,16 +41,18 @@ interface IIcon {
 const defaultStyles = { display: "inline-block", verticalAlign: "middle" };
 
 const Icon = (props: IIcon) => {
-  const { size, unit, viewBox, color, icon, className, style } = props;
+  const { size, viewBox, color, icon, className, style } = props;
   const styles = { ...defaultStyles, ...style };
 
+  console.log(">>>>>>",props);
+  
   return (
     <svg
       className={className}
       style={styles}
       viewBox={viewBox}
-      width={`${size}${unit}`}
-      height={`${size}${unit}`}
+      width={size}
+      height={size}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >

@@ -1,41 +1,68 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Button } from '../components/ButtonComponent/Button';
+import Button from "../components/BrowkUIKit/Button";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: "Browk-UI-Kit/Button",
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    onClickHandler: { onClick: { action: 'clicked' } }
   },
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+Template.parameters = { pseudo: { hover: true } }
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
+export const DefaultAndSmallSizeButton = Template.bind({});
+DefaultAndSmallSizeButton.args = {
+  label: "Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: 'default small',
+  customInlineStyle: {}
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+export const DisabledAndSmallSizeButton = Template.bind({});
+DisabledAndSmallSizeButton.args = {
+  label: "Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: 'disabled small',
+  customInlineStyle: {}
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
+export const PrimaryAndSmallSizeButton = Template.bind({});
+PrimaryAndSmallSizeButton.args = {
+  label: "Change label of small Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: 'primary small',
+  customInlineStyle: {}
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const PrimaryAndMediumSizeButton = Template.bind({});
+PrimaryAndMediumSizeButton.args = {
+  label: "Change label of Medium Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: 'primary medium',
+  customInlineStyle: {}
 };
+
+export const PrimaryAndLargeSizeButton = Template.bind({});
+PrimaryAndLargeSizeButton.args = {
+  label: "Change label of Large Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: 'primary large',
+  customInlineStyle: {}
+}
+
+export const PrimaryButtonWithCustomStyle = Template.bind({});
+PrimaryButtonWithCustomStyle.args = {
+  label: "Button",
+  onClickHandler: ()=> console.log("Button is pressed"),
+  className: '',
+  customInlineStyle: {
+    backgroundColor: 'black',
+    width: '70px',
+    height: '30px',
+    color: '#ffffff'
+  }
+}

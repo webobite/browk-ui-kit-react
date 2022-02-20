@@ -3,9 +3,14 @@ import "./Button.css";
 
 export interface IButton {
   /**
+   * Children Node
+   *  for icon
+   */
+  children?: ReactNode;
+  /**
    * Label of the button
    */
-  label: string;
+  label?: string;
   /**
    * Handler for react element
    */
@@ -19,6 +24,7 @@ export interface IButton {
    *  - medium
    *  - large
    *  - primary
+   *  - with-icon
    */
   className?: string;
   /**
@@ -36,7 +42,10 @@ const Button = (props: IButton) => {
       className={["ui-btn", className].join(" ")}
       onClick={onClickHandler}
     >
-      <span className="ui-btn-label">{label}</span>
+      {props.children}
+      {label !== undefined ? (
+        <span className="ui-btn-label">{label}</span>
+      ) : null}
     </button>
   );
 };

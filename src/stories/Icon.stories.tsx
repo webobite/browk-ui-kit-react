@@ -16,7 +16,7 @@ Template.parameters = { pseudo: { hover: true } }
 export const DefaultAndSmallSizeIcon = Template.bind({});
 DefaultAndSmallSizeIcon.args = {
   size: "30px",
-  viewBox: "0 0 24 24",
+  viewBox: "0 0 16 16",
   color: 'black',
   className: '',
   icon: "loader_xs",
@@ -26,7 +26,7 @@ DefaultAndSmallSizeIcon.args = {
 export const IconWithCustomStyle = Template.bind({});
 IconWithCustomStyle.args = {
   size: "30px",
-  viewBox: "0 0 24 24",
+  viewBox: "0 0 16 16",
   color: "white",
   className: '',
   icon: "checked_xs",

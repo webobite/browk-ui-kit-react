@@ -37,7 +37,47 @@ PrimaryAndSmallSizeButton.args = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    padding: "20px"
+  },
+};
+
+export const DisabledAndSmallSizeButton = Template.bind({});
+DisabledAndSmallSizeButton.args = {
+  label: "",
+  onClickHandler: () => console.log("Button is pressed"),
+  className: "disabled small no-border",
+  customInlineStyle: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    padding: "20px"
+  },
+};
+
+export const IconWithLabelAndSmallSizeButton = Template.bind({});
+IconWithLabelAndSmallSizeButton.args = {
+  label: "Button",
+  onClickHandler: () => console.log("Button is pressed"),
+  className: "primary small no-border",
+  customInlineStyle: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
     justifyContent: "space-between",
-    padding: "10px"
+    padding: "20px"
+  },
+};
+
+export const IconWithLabelAndSmallSizeDisabledButton = Template.bind({});
+IconWithLabelAndSmallSizeDisabledButton.args = {
+  label: "Button",
+  onClickHandler: () => console.log("Button is pressed"),
+  className: "disabled small no-border",
+  customInlineStyle: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "20px"
   },
 };

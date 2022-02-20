@@ -16,7 +16,7 @@ interface IIcon {
   /**
    * ViewBox properties of the svg Icon
    *  for example : 
-   *      viewBox="0 0 24 24"
+   *      viewBox="0 0 16 16"
    */
   viewBox: string | undefined;
   /**

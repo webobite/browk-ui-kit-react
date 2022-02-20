@@ -44,6 +44,10 @@ button.disabled {
   box-shadow: unset;
 }
 
+button.no-border {
+  border: unset;
+}
+
 /* small button className */
 button.small {
   height: 30px;

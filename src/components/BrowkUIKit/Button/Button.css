@@ -63,6 +63,18 @@ button.large {
   height: 80px;
 }
 
+button.square {
+  width: 46px;
+  height: 44px;
+}
+
+button.circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: unset;
+}
+
 /* button label css */
 .ui-btn-label {
   /* Auto layout */

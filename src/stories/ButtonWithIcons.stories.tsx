@@ -15,7 +15,7 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => (
   <Button {...args}>
     <Icon
-      size="20px"
+      size="24px"
       viewBox={"0 0 16 16"}
       color={"white"}
       icon={"loader_xs"}
@@ -79,5 +79,54 @@ IconWithLabelAndSmallSizeDisabledButton.args = {
     alignItems: "center",
     justifyContent: "space-between",
     padding: "20px"
+  },
+};
+
+export const SquareButtonWithIcon = Template.bind({});
+SquareButtonWithIcon.args = {
+  onClickHandler: () => console.log("Button is pressed"),
+  className: "primary square no-boder",
+  customInlineStyle: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+};
+
+export const SquareDisabledButtonWithIcon = Template.bind({});
+SquareDisabledButtonWithIcon.args = {
+  onClickHandler: () => console.log("Button is pressed"),
+  className: "disabled square no-boder",
+  customInlineStyle: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+};
+
+
+export const CircleButtonWithIcon = Template.bind({});
+CircleButtonWithIcon.args = {
+  onClickHandler: () => console.log("Button is pressed"),
+  className: "primary circle no-border",
+  customInlineStyle: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+};
+
+export const CircleDisabledButtonWithIcon = Template.bind({});
+CircleDisabledButtonWithIcon.args = {
+  onClickHandler: () => console.log("Button is pressed"),
+  className: "disabled circle no-border",
+  customInlineStyle: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
 };
